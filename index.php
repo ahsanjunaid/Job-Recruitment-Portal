@@ -64,9 +64,7 @@ require_once("db.php");
           <li>
             <a href="#company">Company</a>
           </li>
-          <li>
-            <a href="#about">About Us</a>
-          </li>
+          
           <?php if(empty($_SESSION['id_user']) && empty($_SESSION['id_company'])) { ?>
           <li>
             <a href="login.php">Login</a>
@@ -155,79 +153,6 @@ require_once("db.php");
       </div>
     </section>
 
-    <section id="candidates" class="content-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center latest-job margin-bottom-20">
-            <h1>Candidates</h1>
-            <p>Finding a job just got easier. Create a profile and apply with single mouse click.</p>            
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4 col-md-4">
-            <div class="thumbnail candidate-img">
-              <img src="img/browse.jpg" alt="Browse Jobs">
-              <div class="caption">
-                <h3 class="text-center">Browse Jobs</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-md-4">
-            <div class="thumbnail candidate-img">
-              <img src="img/interviewed.jpeg" alt="Apply & Get Interviewed">
-              <div class="caption">
-                <h3 class="text-center">Apply & Get Interviewed</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-md-4">
-            <div class="thumbnail candidate-img">
-              <img src="img/career.jpg" alt="Start A Career">
-              <div class="caption">
-                <h3 class="text-center">Start A Career</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="company" class="content-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center latest-job margin-bottom-20">
-            <h1>Companies</h1>
-            <p>Hiring? Register your company for free, browse our talented pool, post and track job applications</p>            
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4 col-md-4">
-            <div class="thumbnail company-img">
-              <img src="img/postjob.png" alt="Browse Jobs">
-              <div class="caption">
-                <h3 class="text-center">Post A Job</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-md-4">
-            <div class="thumbnail company-img">
-              <img src="img/manage.jpg" alt="Apply & Get Interviewed">
-              <div class="caption">
-                <h3 class="text-center">Manage & Track</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-md-4">
-            <div class="thumbnail company-img">
-              <img src="img/hire.png" alt="Start A Career">
-              <div class="caption">
-                <h3 class="text-center">Hire</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section id="statistics" class="content-header">
       <div class="container">
@@ -332,39 +257,21 @@ require_once("db.php");
       </div>
       </div>
     </section>
-
-    <section id="about" class="content-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center latest-job margin-bottom-20">
-            <h1>About US</h1>                      
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <img src="img/browse.jpg" class="img-responsive">
-          </div>
-          <div class="col-md-6 about-text margin-bottom-20">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing <p>The online job portal application allows job seekers and recruiters to connect.The application provides the ability for job seekers to create their accounts, upload their profile and resume, search for jobs, apply for jobs, view different job openings. The application provides the ability for companies to create their accounts, search candidates, create job postings, and view candidates applications.
-            </p>
-            <p>
-              This website is used to provide a platform for potential candidates to get their dream job and excel in yheir career.
-              This site can be used as a paving path for both companies and job-seekers for a better life .
-              
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
+ <br>
   </div>
+  
   <!-- /.content-wrapper -->
 
-  <footer class="main-footer" style="margin-left: 0px;">
-    <div class="text-center">
-      <strong>Copyright &copy; 2016-2017 <a href="learningfromscratch.online">Job Portal</a>.</strong> All rights
-    reserved.
-    </div>
+  <footer class="main-footer" style="margin-left: 0px; color : #fff;  background-color:#202020;">
+    <div class="container"  style="text-align: center">
+
+		<div>
+            <br>
+			<p><b>Job Recruitment Portal</b> | Developed by Mohammad Ahsan Junaid and Abdul Rehman <br> Supervised By Dr. Aneela Usman and Co-Supervised by Mr. Irfan Hameed</p>
+            <br>
+		</div>
+
+	</div>
   </footer>
 
   <!-- /.control-sidebar -->
