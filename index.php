@@ -58,12 +58,6 @@ require_once("db.php");
           <li>
             <a href="jobs.php">Jobs</a>
           </li>
-          <li>
-            <a href="#candidates">Candidates</a>
-          </li>
-          <li>
-            <a href="#company">Company</a>
-          </li>
           
           <?php if(empty($_SESSION['id_user']) && empty($_SESSION['id_company'])) { ?>
           <li>

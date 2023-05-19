@@ -86,8 +86,8 @@ require_once("../db.php");
                   <li><a href="mailbox.php"><i class="fa fa-envelope"></i> Mailbox</a></li>
                   <li class="active"><a href="settings.php"><i class="fa fa-gear"></i> Settings</a></li>
                   <li><a href="../logout.php"><i class="fa fa-arrow-circle-o-right"></i> Logout</a></li>
-                </ul>e-o-right"></i> Logout</a></li>
                 </ul>
+               
               </div>
             </div>
           </div>
@@ -129,11 +129,16 @@ require_once("../db.php");
   </div>
   <!-- /.content-wrapper -->
 
-  <footer class="main-footer" style="margin-left: 0px;">
-    <div class="text-center">
-      <strong>Copyright &copy; 2016-2017 <a href="learningfromscratch.online">Job Portal</a>.</strong> All rights
-    reserved.
-    </div>
+  <footer class="main-footer" style="margin-left: 0px; color : #fff;  background-color:#202020;">
+    <div class="container"  style="text-align: center">
+
+		<div>
+            <br>
+			<p><b>Job Recruitment Portal</b> | Developed by Mohammad Ahsan Junaid and Abdul Rehman <br> Supervised By Dr. Aneela Usman and Co-Supervised by Mr. Irfan Hameed</p>
+            <br>
+		</div>
+
+	</div>
   </footer>
 
   <!-- /.control-sidebar -->
