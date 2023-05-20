@@ -1,0 +1,1 @@
+This Folder Will Store All Resumes/CV's of Candidates
