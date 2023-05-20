@@ -150,7 +150,7 @@ require_once("db.php");
                     Password Mismatch!! 
                   </div>
               <div class="form-group">
-                <input class="form-control input-lg" type="text" name="contactno" placeholder="Phone Number" minlength="10" maxlength="10" autocomplete="off" onkeypress="return validatePhone(event);" required>
+                <input class="form-control input-lg" type="text" name="contactno" placeholder="Phone Number" minlength="11" maxlength="11" autocomplete="off" onkeypress="return validatePhone(event);" required>
               </div>
               <div class="form-group">
                 <select class="form-control  input-lg" id="country" name="country" required>
