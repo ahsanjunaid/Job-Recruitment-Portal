@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2023 at 03:25 PM
+-- Generation Time: May 22, 2023 at 04:44 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -48437,8 +48437,8 @@ CREATE TABLE `company` (
 --
 
 INSERT INTO `company` (`id_company`, `name`, `companyname`, `country`, `state`, `city`, `contactno`, `website`, `email`, `password`, `aboutme`, `logo`, `createdAt`, `active`) VALUES
-(105, 'Employer 1', 'PIEAS', 'Pakistan', 'Baluchistan', 'Ziarat', '03100000001', 'www.test1.com', 'test1@employer.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', 'Hi I am the First Test Employer', '646b6a340a995.png', '2023-05-22 13:12:20', 1),
-(106, 'Employer 2', 'NUST', 'Pakistan', 'Federal Capital Area', 'Select City', '03100000002', 'www.test2.com', 'test2@employer.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', 'Hi I am the Second Test Employer', '646b6a83ea17a.png', '2023-05-22 13:13:39', 1),
+(105, 'Employer 1', 'PIEAS', 'Pakistan', 'Punjab', 'Lahore', '03100000001', 'www.test1.com', 'test1@employer.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', 'Hi I am the First Test Employer', '646b6a340a995.png', '2023-05-22 13:12:20', 1),
+(106, 'Employer 2', 'NUST', 'Pakistan', 'Federal Capital Area', 'Islamabad', '03100000002', 'www.test2.com', 'test2@employer.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', 'Hi I am the Second Test Employer', '646b6a83ea17a.png', '2023-05-22 13:13:39', 1),
 (107, 'Employer 3', 'FAST', 'Pakistan', 'Sind', 'Karachi', '03100000003', 'www.test3.com', 'test3@employer.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', 'Hi I am the Third Test Employer', '646b6ad71c59e.png', '2023-05-22 13:15:03', 1),
 (108, 'Employer 4', 'GIKI', 'Pakistan', 'Punjab', 'Mianwali', '03100000004', 'www.test4.com', 'test4@employer.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', 'Hi I am the Fourth Test Employer', '646b6b459d536.png', '2023-05-22 13:16:53', 1),
 (109, 'Employer 5', 'NUML', 'Pakistan', 'Baluchistan', 'Quetta', '03100000005', 'www.test5.com', 'test5@employer.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', 'Hi I am the Fifth Test Employer', '646b6b8b3ac57.png', '2023-05-22 13:18:03', 1);
@@ -48725,6 +48725,17 @@ CREATE TABLE `job_post` (
   `qualification` varchar(255) NOT NULL,
   `createdat` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `job_post`
+--
+
+INSERT INTO `job_post` (`id_jobpost`, `id_company`, `jobtitle`, `description`, `minimumsalary`, `maximumsalary`, `experience`, `qualification`, `createdat`) VALUES
+(104, 105, 'Senior Dev', '<p>1. Technical Expertise: You should have expertise in one or more programming languages (such as Java, Python, C#, etc.) and frameworks relevant to your domain. You should have a deep understanding of software development principles, design patterns, and best practices.</p>\\r\\n<p>2. Architecture and Design: Senior developers are expected to contribute to the architecture and design decisions of the projects they work on. You should have experience in designing scalable, maintainable, and efficient software systems.</p>\\r\\n<p>3. Full-Stack Development: Depending on the requirements of the role, proficiency in both front-end and back-end development may be expected. Knowledge of web development technologies (HTML, CSS, JavaScript) and frameworks (React, Angular, Node.js, Django, etc.) can be valuable.</p>\\r\\n<p>4. Database Management: Understanding of database management systems (SQL or NoSQL) and proficiency in writing efficient database queries is important. Experience in data modeling, performance optimization, and scalability is a plus.</p>', '45000', '60000', '5', 'MS(CS)', '2023-05-22 14:07:32'),
+(105, 105, 'Junior Dev', '<p>1. Basic Programming Skills: Proficiency in at least one programming language (such as Python, Java, C#, JavaScript) is essential. You should have a basic understanding of programming concepts like variables, data types, loops, conditional statements, and functions.</p>\\r\\n<p>2. Familiarity with Development Tools: Basic knowledge of development tools such as Integrated Development Environments (IDEs), code editors, version control systems (e.g., Git), and bug tracking systems can be beneficial.</p>\\r\\n<p>3. Web Development Fundamentals: Understanding HTML, CSS, and JavaScript is important for web development. Familiarity with front-end frameworks (e.g., React, Angular, Vue.js) and back-end frameworks (e.g., Node.js, Django, Laravel) is a plus.</p>', '30000', '50000', '0', 'BS(CS)', '2023-05-22 14:08:44'),
+(106, 106, 'Database Expert', '<p>For a database expert or database administrator (DBA) role, employers typically seek candidates with a strong background in database management and administration.</p>\\r\\n<p>1. Database Management Systems (DBMS): In-depth knowledge and experience with one or more database management systems such as Oracle, MySQL, Microsoft SQL Server, PostgreSQL, or MongoDB. Understanding the concepts, features, and capabilities of these systems is essential.</p>\\r\\n<p>2. Database Design and Modeling: Proficiency in designing and implementing database schemas, data models, and database normalization techniques. Knowledge of entity-relationship (ER) modeling and understanding how to translate business requirements into efficient database structures.</p>\\r\\n<p>3. Database Administration: Experience in administering and managing databases, including tasks such as installation, configuration, backup and recovery, performance tuning, and security management. Knowledge of database administration tools and utilities is important.</p>\\r\\n<p>4. Query Optimization and Performance Tuning: Ability to analyze and optimize database queries for performance, identify and resolve performance bottlenecks, and implement indexing strategies. Familiarity with query optimization techniques, execution plans, and performance monitoring tools.</p>', '60000', '80000', '7', 'MS(CS)', '2023-05-22 14:10:15'),
+(107, 106, 'Cyber Security Dev', '<p>For a cybersecurity developer role, employers typically seek candidates with a strong background in software development and expertise in cybersecurity principles and practices.</p>\\r\\n<p>1. Programming Skills: Proficiency in one or more programming languages such as Python, Java, C++, or C#. Knowledge of scripting languages like PowerShell or Bash is also valuable.</p>\\r\\n<p>2. Cybersecurity Fundamentals: Understanding of cybersecurity concepts, principles, and best practices. Familiarity with common threats, vulnerabilities, and attack vectors. Knowledge of secure coding practices and the ability to identify and address security flaws in software.</p>\\r\\n<p>3. Secure Software Development: Experience in developing secure applications and implementing security controls throughout the software development lifecycle (SDLC). Knowledge of secure coding practices, encryption, authentication, access controls, and secure communication protocols.</p>\\r\\n<p>4. Vulnerability Assessment and Penetration Testing: Familiarity with vulnerability assessment tools and techniques, as well as experience in conducting penetration testing to identify and remediate security weaknesses in applications and systems.</p>\\r\\n<p>5. Network Security: Understanding of network protocols, firewalls, intrusion detection and prevention systems (IDPS), and secure network architecture. Knowledge of network security principles and the ability to configure and manage network security controls.</p>\\r\\n<p>6. Security Compliance and Regulations: Knowledge of industry standards and regulations related to cybersecurity, such as the Payment Card Industry Data Security Standard (PCI DSS), General Data Protection Regulation (GDPR), or Health Insurance Portability and Accountability Act (HIPAA).</p>\\r\\n<p>7. Security Frameworks and Tools: Familiarity with cybersecurity frameworks such as NIST Cybersecurity Framework or ISO 27001. Knowledge of security tools and technologies such as SIEM (Security Information and Event Management) systems, intrusion detection systems (IDS), or antivirus solutions.</p>\\r\\n<p>8. Continuous Learning: The field of cybersecurity is constantly evolving, so a willingness to stay updated with the latest trends, technologies, and security threats is essential. Participation in relevant certifications, training programs, or cybersecurity communities is a plus.</p>\\r\\n<p>&nbsp;</p>', '50000', '100000', '9', 'MS (Cyber Security)', '2023-05-22 14:12:11'),
+(108, 107, 'Electrical Engineer', '<p>For an electrical engineer role, employers typically seek candidates with a strong foundation in electrical engineering principles, technical expertise, and practical experience. Here are some common requirements for an electrical engineer position:</p>\\r\\n<p>1. Electrical Circuit Design: Proficiency in designing and analyzing electrical circuits, including knowledge of circuit theory, Ohm\\\'s law, Kirchhoff\\\'s laws, and component selection. Ability to use computer-aided design (CAD) tools for circuit design.</p>\\r\\n<p>2. Electronics: Understanding of electronic components, such as resistors, capacitors, diodes, transistors, and integrated circuits. Familiarity with analog and digital electronics, signal processing, and PCB (Printed Circuit Board) design.</p>\\r\\n<p>3. Power Systems: Knowledge of power generation, transmission, and distribution systems. Understanding of power system components, such as transformers, generators, motors, and protective devices. Ability to analyze power flow, fault conditions, and perform load calculations.</p>\\r\\n<p>&nbsp;</p>', '25000', '75000', '3', 'BS (EE)', '2023-05-22 14:22:37');
 
 -- --------------------------------------------------------
 
@@ -53021,7 +53032,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `apply_job_post`
 --
 ALTER TABLE `apply_job_post`
-  MODIFY `id_apply` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_apply` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `cities`
@@ -53045,7 +53056,7 @@ ALTER TABLE `countries`
 -- AUTO_INCREMENT for table `job_post`
 --
 ALTER TABLE `job_post`
-  MODIFY `id_jobpost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `id_jobpost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 
 --
 -- AUTO_INCREMENT for table `mailbox`

@@ -98,7 +98,7 @@ require_once("db.php");
           <div class="col-md-12 latest-job margin-top-50 margin-bottom-20">
           <h1 class="text-center">Latest Jobs</h1>  
             <div class="input-group input-group-lg">
-                <input type="text" id="searchBar" class="form-control" placeholder="Search job">
+                <input type="text" id="searchBar" class="form-control" placeholder="Search Job">
                 <span class="input-group-btn">
                   <button id="searchBtn" type="button" class="btn btn-info btn-flat">Go!</button>
                 </span>
@@ -121,8 +121,9 @@ require_once("db.php");
                   <li class="treeview menu-open">
                     <a href="#"><i class="fa fa-plane text-red"></i> City <span class="pull-right"><i class="fa fa-angle-down pull-right"></i></span></a>
                     <ul class="treeview-menu">
-                      <li><a href=""  class="citySearch" data-target="Delhi"><i class="fa fa-circle-o text-yellow"></i> Delhi</a></li>
-                      <li><a href="" class="citySearch" data-target="Kouba"><i class="fa fa-circle-o text-yellow"></i> Kouba</a></li>
+                      <li><a href=""  class="citySearch" data-target="Islamabad"><i class="fa fa-circle-o text-yellow"></i> Islamabad</a></li>
+                      <li><a href="" class="citySearch" data-target="Lahore"><i class="fa fa-circle-o text-yellow"></i> Lahore</a></li>
+                      <li><a href="" class="citySearch" data-target="Karachi"><i class="fa fa-circle-o text-yellow"></i> Karachi</a></li>
                     </ul>
                   </li>
                   <li class="treeview menu-open">

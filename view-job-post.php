@@ -116,13 +116,8 @@ require_once("db.php");
               <img src="uploads/logo/<?php echo $row['logo']; ?>" alt="companylogo">
               <div class="caption text-center">
                 <h3><?php echo $row['companyname']; ?></h3>
-                <p><a href="#" class="btn btn-primary btn-flat" role="button">More Info</a>
                 <hr>
-                <div class="row">
-                  <div class="col-md-4"><a href=""><i class="fa fa-address-card-o"></i> Apply</a></div>
-                  <div class="col-md-4"><a href=""><i class="fa fa-warning"></i> Report</a></div>
-                  <div class="col-md-4"><a href=""><i class="fa fa-envelope"></i> Email</a></div>
-                </div>
+                
               </div>
             </div>
           </div>
