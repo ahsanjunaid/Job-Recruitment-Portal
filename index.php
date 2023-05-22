@@ -96,8 +96,8 @@ require_once("db.php");
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center index-head">
-            <h1>All <strong>JOBS</strong> In One Place</h1>
-            <p>One search, global reach</p>
+            <h1>Find Your <strong>Dream Job</strong></h1>
+            <p>Apply Now!</p>
             <p><a class="btn btn-success btn-lg" href="jobs.php" role="button">Search Jobs</a></p>
           </div>
         </div>
@@ -152,7 +152,7 @@ require_once("db.php");
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center latest-job margin-bottom-20">
-            <h1>Our Statistics</h1>
+            <h1>Our Stats</h1>
           </div>
         </div>
         <div class="row">
@@ -194,7 +194,7 @@ require_once("db.php");
                     ?>
               <h3><?php echo $totalno; ?></h3>
 
-              <p>Registered Company</p>
+              <p>Registered Employers</p>
             </div>
             <div class="icon">
                 <i class="ion ion-briefcase"></i>
@@ -240,7 +240,7 @@ require_once("db.php");
                     ?>
               <h3><?php echo $totalno; ?></h3>
 
-              <p>Daily Users</p>
+              <p>Total Users</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-stalker"></i>

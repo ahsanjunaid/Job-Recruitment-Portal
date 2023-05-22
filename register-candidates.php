@@ -111,12 +111,15 @@ if(isset($_SESSION['id_user']) || isset($_SESSION['id_company'])) {
               <div class="form-group">
                 <input class="form-control input-lg" type="text" id="email" name="email" placeholder="Email *" required>
               </div>
+                <div class="form-group">
+                <input class="form-control input-lg" type="text" id="designation" minlength="13" maxlength="13" name="designation" placeholder="CNIC *" onkeypress="return validatePhone(event);" required >
+              </div>
               <div class="form-group">
                 <textarea class="form-control input-lg" rows="4" id="aboutme" name="aboutme" placeholder="Brief intro about yourself *" required></textarea>
               </div>
               <div class="form-group">
                 <label>Date Of Birth</label>
-                <input class="form-control input-lg" type="date" id="dob" min="1960-01-01" max="1999-01-31" name="dob" placeholder="Date Of Birth">
+                <input class="form-control input-lg" type="date" id="dob" min="1960-01-01" max="2005-01-31" name="dob" placeholder="Date Of Birth">
               </div>
               <div class="form-group">
                 <input class="form-control input-lg" type="text" id="age" name="age" placeholder="Age" readonly>
@@ -168,7 +171,7 @@ if(isset($_SESSION['id_user']) || isset($_SESSION['id_company'])) {
               <div class="form-group">
                 <input class="form-control input-lg" type="text" id="contactno" name="contactno" minlength="11" maxlength="11" onkeypress="return validatePhone(event);" placeholder="Phone Number">
               </div>
-              <div class="form-group">
+             <div class="form-group">
                 <textarea class="form-control input-lg" rows="4" id="address" name="address" placeholder="Address"></textarea>
               </div>
               <div class="form-group">
@@ -180,9 +183,7 @@ if(isset($_SESSION['id_user']) || isset($_SESSION['id_company'])) {
               <div class="form-group">
                 <textarea class="form-control input-lg" rows="4" id="skills" name="skills" placeholder="Enter Skills"></textarea>
               </div>              
-              <div class="form-group">
-                <input class="form-control input-lg" type="text" id="designation" name="designation" placeholder="Designation">
-              </div>
+              
 
               <div class="form-group">
                 <label style="color: red;">File Format PDF Only!</label>

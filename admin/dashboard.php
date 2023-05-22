@@ -14,7 +14,7 @@ require_once("../db.php");
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Job Portal</title>
+  <title>Job Recruitment Portal</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -49,7 +49,7 @@ require_once("../db.php");
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>J</b>P</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Job</b> Portal</span>
+      <span class="logo-lg"><b>Job</b> Recruitment Portal</span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->

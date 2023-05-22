@@ -43,7 +43,7 @@ if(isset($_SESSION['id_user']) || isset($_SESSION['id_company'])) {
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Company Login</p>
+    <p class="login-box-msg">Employer Login</p>
 
     <form method="post" action="checkcompanylogin.php">
       <div class="form-group has-feedback">
@@ -65,7 +65,7 @@ if(isset($_SESSION['id_user']) || isset($_SESSION['id_company'])) {
         <!-- /.col -->
         <div class="col-xs-12">
         <?php 
-              //If Company have successfully registered then show them this success message
+              //If Employer have successfully registered then show them this success message
               //Todo: Remove Success Message without reload?
               if(isset($_SESSION['registerCompleted'])) {
                 ?>
@@ -76,7 +76,7 @@ if(isset($_SESSION['id_user']) || isset($_SESSION['id_company'])) {
                unset($_SESSION['registerCompleted']); }
               ?>   
               <?php 
-              //If Company Failed To log in then show error message.
+              //If Employer Failed To log in then show error message.
               if(isset($_SESSION['loginError'])) {
                 ?>
                 <div>
