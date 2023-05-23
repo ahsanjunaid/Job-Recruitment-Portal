@@ -134,6 +134,17 @@ if($result->num_rows == 0)
                     echo '<br>';
                     echo 'City: '.$row['city'];
                     echo '<br>';
+                    echo 'CNIC: '.$row['designation'];
+                    echo '<br>';
+                    echo 'Age: '.$row['age']. ' Years';
+                    echo '<br>';
+                    echo 'Phone Number: '.$row['contactno'];
+                    echo '<br>';
+                    echo 'Qualification: '.$row['qualification'].'(' .$row['stream'].')';
+                    echo '<br>';
+                    echo 'Skills: '.$row['skills'];
+                    echo '<br>';
+                    echo '<br>';
                     if($row['resume'] != "") {
                       echo '<a href="../uploads/resume/'.$row['resume'].'" class="btn btn-info" download="Resume">Download Resume</a>';
                     }
@@ -144,7 +155,7 @@ if($result->num_rows == 0)
                   ?>
                   <div class="row">
                     <div class="col-md-3 pull-left">
-                      <a href="under-review.php?id=<?php echo $row['id_user']; ?>&id_jobpost=<?php echo $_GET['id_jobpost']; ?>" class="btn btn-success">Mark Under Review</a>
+                      <a href="under-review.php?id=<?php echo $row['id_user']; ?>&id_jobpost=<?php echo $_GET['id_jobpost']; ?>"style="background-color:#3d8c40" class="btn btn-success">Select Application</a>
                     </div>
                     <div class="col-md-3 pull-right">
                       <a href="reject.php?id=<?php echo $row['id_user']; ?>&id_jobpost=<?php echo $_GET['id_jobpost']; ?>" class="btn btn-danger">Reject Application</a>
