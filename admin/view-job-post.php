@@ -92,7 +92,7 @@ if($result1->num_rows > 0)
             <div class="clearfix"></div>
             <hr>
             <div>
-              <p><span class="margin-right-10"><i class="fa fa-location-arrow text-green"></i> <?php echo $row['city']; ?></span> <i class="fa fa-calendar text-green"></i> <?php echo date("d-M-Y", strtotime($row['createdat'])); ?></p>              
+              <p><span class="margin-right-10"><i class="fa fa-location-arrow text-green"></i> <?php echo $row['city']; ?></span> <span class="margin-right-10"><i class="fa fa-clock-o text-green"></i> <?php echo $row['experience']; ?> Years Experience</span> <span class="margin-right-10"><i class="fa fa-clock-o text-green"></i> <?php echo $row['maxage']; ?> Max Age</span> <i class="fa fa-calendar text-green"></i> <?php echo date("d-M-Y", strtotime($row['createdat'])); ?></p>              
             </div>
             <div>
               <?php echo stripcslashes($row['description']); ?>

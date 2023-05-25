@@ -18,9 +18,9 @@ if(isset($_POST)) {
 
 
 
-	$stmt = $conn->prepare("INSERT INTO job_post(id_company, jobtitle, description, minimumsalary, maximumsalary, experience, qualification) VALUES (?,?, ?, ?, ?, ?, ?)");
+	$stmt = $conn->prepare("INSERT INTO job_post(id_company, jobtitle, description, minimumsalary, maximumsalary, experience, qualification, maxage) VALUES (?,?, ?, ?, ?, ?, ?, ?)");
 
-	$stmt->bind_param("issssss", $_SESSION['id_company'], $jobtitle, $description, $minimumsalary, $maximumsalary, $experience, $qualification);
+	$stmt->bind_param("isssssss", $_SESSION['id_company'], $jobtitle, $description, $minimumsalary, $maximumsalary, $experience, $qualification, $maxage);
 
 	$jobtitle = mysqli_real_escape_string($conn, $_POST['jobtitle']);
 	$description = mysqli_real_escape_string($conn, $_POST['description']);
@@ -28,6 +28,7 @@ if(isset($_POST)) {
 	$maximumsalary = mysqli_real_escape_string($conn, $_POST['maximumsalary']);
 	$experience = mysqli_real_escape_string($conn, $_POST['experience']);
 	$qualification = mysqli_real_escape_string($conn, $_POST['qualification']);
+	$maxage = mysqli_real_escape_string($conn, $_POST['maxage']);
 
 
 	if($stmt->execute()) {
@@ -45,7 +46,7 @@ if(isset($_POST)) {
 	//THIS IS NOT SAFE FROM SQL INJECTION BUT OK TO USE WITH SMALL TO MEDIUM SIZE AUDIENCE
 
 	//Insert Job Post Query 
-	// $sql = "INSERT INTO job_post(id_company, jobtitle, description, minimumsalary, maximumsalary, experience, qualification) VALUES ('$_SESSION[id_company]','$jobtitle', '$description', '$minimumsalary', '$maximumsalary', '$experience', '$qualification')";
+	// $sql = "INSERT INTO job_post(id_company, jobtitle, description, minimumsalary, maximumsalary, experience, qualification, maxage) VALUES ('$_SESSION[id_company]','$jobtitle', '$description', '$minimumsalary', '$maximumsalary', '$experience', '$qualification', '$maxage')";
 
 	// if($conn->query($sql)===TRUE) {
 	// 	//If data Inserted successfully then redirect to dashboard

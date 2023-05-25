@@ -1,11 +1,19 @@
 <?php
 
-//To Handle Session Variables on This Page
+// To Handle Session Variables on This Page
 session_start();
 
-
-//Including Database Connection From db.php file to avoid rewriting in all files
+// Including Database Connection From db.php file to avoid rewriting in all files
 require_once("db.php");
+
+if (isset($_SESSION["id_user"]) && empty($_SESSION['companyLogged'])) {
+  // Retrieve the user's date of birth from the database or any other source
+  $userDOB = ''; // Replace this with the code to retrieve the user's date of birth
+
+  // Set the 'dob' key in the $_SESSION array with the user's date of birth
+  $_SESSION['dob'] = $userDOB;
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -97,17 +105,33 @@ require_once("db.php");
             <div class="clearfix"></div>
             <hr>
             <div>
-              <p><span class="margin-right-10"><i class="fa fa-location-arrow text-green"></i> <?php echo $row['city']; ?></span> <i class="fa fa-calendar text-green"></i> <?php echo date("d-M-Y", strtotime($row['createdat'])); ?></p>              
+              <p><span class="margin-right-10"><i class="fa fa-location-arrow text-green"></i> <?php echo $row['city']; ?></span> <span class="margin-right-10"><i class="fa fa-clock-o text-green"></i> <?php echo $row['maxage']; ?> Years Max Age</span> <i class="fa fa-calendar text-green"></i> <?php echo date("d-M-Y", strtotime($row['createdat'])); ?></p>              
             </div>
             <div>
               <?php echo stripcslashes($row['description']); ?>
             </div>
-            <?php 
-            if(isset($_SESSION["id_user"]) && empty($_SESSION['companyLogged'])) { ?>
-            <div>
-              <a href="apply.php?id=<?php echo $row['id_jobpost']; ?>" class="btn btn-success btn-flat margin-top-50">Apply</a>
-            </div>
-            <?php } ?>
+            <?php
+if (isset($_SESSION["id_user"]) && empty($_SESSION['companyLogged'])) {
+  $currentDate = date('Y-m-d');
+  $maxAge = $row['maxage'];
+  $userDOB = $_SESSION['dob'];
+  $diff = date_diff(date_create($userDOB), date_create($currentDate));
+  $userAge = $diff->format('%y');
+  
+  if ($userAge <= $maxAge) {
+?>
+<div>
+  <a href="apply.php?id=<?php echo $row['id_jobpost']; ?>" class="btn btn-success btn-flat margin-top-50">Apply</a>
+</div>
+<?php
+  } else {
+?>
+<div class="alert alert-danger">You are over-aged for this job.</div>
+<?php
+  }
+} ?>
+
+
             
             
           </div>

@@ -117,8 +117,12 @@ require_once("../db.php");
                   <div class="form-group">
                 <input type="number" class="form-control  input-lg" id="experience" autocomplete="off" name="experience" placeholder="Experience (in Years) Required" required="">
                   </div>
+                    
                   <div class="form-group">
                     <input type="text" class="form-control  input-lg" id="qualification" name="qualification" placeholder="Qualification Required" required="">
+                  </div>
+                    <div class="form-group">
+                <input type="number" class="form-control  input-lg" id="maxage" autocomplete="off" name="maxage" placeholder="Max Age (in Years) Required" required="">
                   </div>
                   <div class="form-group">
                     <button type="submit" class="btn btn-flat btn-success">Create</button>

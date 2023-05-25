@@ -108,6 +108,7 @@ require_once("../db.php");
                     <thead>
                       <th>Candidate</th>
                       <th>Highest Qualification</th>
+                      <th>Age</th>
                       <th>Skills</th>
                       <th>City</th>
                       <th>State</th>
@@ -128,6 +129,7 @@ require_once("../db.php");
                       <tr>
                         <td><?php echo $row['firstname'].' '.$row['lastname']; ?></td>
                         <td><?php echo $row['qualification']; ?></td>
+                        <td><?php echo $row['age']; ?></td>
                         <td>
                           <?php
                           foreach ($skills as $value) {
@@ -151,7 +153,11 @@ require_once("../db.php");
                 </div>
               </div>
             </div>
-            
+            <div class="row margin-top-20">
+  <div class="col-md-12">
+    <a href="download-excel.php" class="btn btn-primary">Download as Excel</a>
+  </div>
+</div>
           </div>
         </div>
       </div>
