@@ -109,7 +109,6 @@ require_once("../db.php");
                       <th>Candidate</th>
                       <th>Highest Qualification</th>
                       <th>Age</th>
-                      <th>Skills</th>
                       <th>City</th>
                       <th>State</th>
                       <th>Download Resume</th>
@@ -130,13 +129,7 @@ require_once("../db.php");
                         <td><?php echo $row['firstname'].' '.$row['lastname']; ?></td>
                         <td><?php echo $row['qualification']; ?></td>
                         <td><?php echo $row['age']; ?></td>
-                        <td>
-                          <?php
-                          foreach ($skills as $value) {
-                            echo ' <span class="label label-success">'.$value.'</span>';
-                          }
-                          ?>
-                        </td>
+                        
                         <td><?php echo $row['city']; ?></td>
                         <td><?php echo $row['state']; ?></td>
                         <td><a href="../uploads/resume/<?php echo $row['resume']; ?>" download="<?php echo $row['firstname'].' Resume'; ?>"><i class="fa fa-file-pdf-o"></i></a></td>
@@ -153,11 +146,8 @@ require_once("../db.php");
                 </div>
               </div>
             </div>
-            <div class="row margin-top-20">
-  <div class="col-md-12">
-    <a href="download-excel.php" class="btn btn-primary">Download as Excel</a>
-  </div>
-</div>
+            <button id="downloadBtn" class="btn btn-primary">Download CSV</button>
+
           </div>
         </div>
       </div>
@@ -197,7 +187,7 @@ require_once("../db.php");
 <script src="../js/adminlte.min.js"></script>
 
 
-<script>
+    <script>
   $(function () {
     $('#example2').DataTable({
       'paging'      : true,
@@ -207,7 +197,32 @@ require_once("../db.php");
       'info'        : true,
       'autoWidth'   : false
     });
+
+    // Event listener for the download button click
+    $('#downloadBtn').click(function() {
+      // Get the table data
+      var table = $('#example2').DataTable();
+      var data = table.data();
+
+      // Create a CSV string from the data
+      var csvContent = "data:text/csv;charset=utf-8,";
+      data.each(function (rowArray) {
+        var row = rowArray.join(",");
+        csvContent += row + "\r\n";
+      });
+
+      // Create a temporary link element and trigger the download
+      var encodedUri = encodeURI(csvContent);
+      var link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "data.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
   });
 </script>
+
+
 </body>
 </html>
