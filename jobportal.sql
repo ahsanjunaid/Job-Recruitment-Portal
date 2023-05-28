@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2023 at 07:07 PM
+-- Generation Time: May 28, 2023 at 10:33 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -48794,6 +48794,13 @@ CREATE TABLE `reply_mailbox` (
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data for table `reply_mailbox`
+--
+
+INSERT INTO `reply_mailbox` (`id_reply`, `id_mailbox`, `id_user`, `usertype`, `message`, `createdAt`) VALUES
+(2, 5, 104, 'user', '<p>Acknowleged</p>', '2023-05-25 17:28:00');
+
 -- --------------------------------------------------------
 
 --
@@ -53094,7 +53101,7 @@ ALTER TABLE `mailbox`
 -- AUTO_INCREMENT for table `reply_mailbox`
 --
 ALTER TABLE `reply_mailbox`
-  MODIFY `id_reply` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_reply` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `states`
