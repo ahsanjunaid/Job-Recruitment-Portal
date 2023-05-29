@@ -8,8 +8,16 @@ require_once("db.php");
 
 if (isset($_SESSION["id_user"]) && empty($_SESSION['companyLogged'])) {
   // Retrieve the user's date of birth from the database or any other source
-  $userDOB = ''; // Replace this with the code to retrieve the user's date of birth
-
+  $userID = $_SESSION["id_user"];
+// Retrieve the user's date of birth from the database based on their ID
+$query = "SELECT dob FROM users WHERE id_user = $userID";
+$result = mysqli_query($conn, $query);
+if ($row = mysqli_fetch_assoc($result)) {
+    $userDOB = $row['dob'];
+} else {
+    // Handle the case when the user's date of birth is not found
+    $userDOB = ''; // Set a default value or handle the error accordingly
+}
   // Set the 'dob' key in the $_SESSION array with the user's date of birth
   $_SESSION['dob'] = $userDOB;
 }
