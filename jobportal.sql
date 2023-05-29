@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2023 at 10:33 PM
+-- Generation Time: May 29, 2023 at 08:22 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -59,15 +59,14 @@ CREATE TABLE `apply_job_post` (
 --
 
 INSERT INTO `apply_job_post` (`id_apply`, `id_jobpost`, `id_company`, `id_user`, `status`) VALUES
-(7, 104, 105, 104, 2),
-(8, 105, 105, 104, 0),
 (9, 104, 105, 105, 0),
 (10, 104, 105, 106, 0),
 (11, 104, 105, 107, 0),
 (12, 105, 105, 107, 0),
 (13, 104, 105, 108, 0),
 (14, 104, 105, 109, 0),
-(15, 110, 105, 104, 0);
+(15, 110, 105, 104, 0),
+(17, 111, 105, 104, 0);
 
 -- --------------------------------------------------------
 
@@ -48752,8 +48751,7 @@ INSERT INTO `job_post` (`id_jobpost`, `id_company`, `jobtitle`, `description`, `
 (106, 106, 'Database Expert', '<p>For a database expert or database administrator (DBA) role, employers typically seek candidates with a strong background in database management and administration.</p>\\r\\n<p>1. Database Management Systems (DBMS): In-depth knowledge and experience with one or more database management systems such as Oracle, MySQL, Microsoft SQL Server, PostgreSQL, or MongoDB. Understanding the concepts, features, and capabilities of these systems is essential.</p>\\r\\n<p>2. Database Design and Modeling: Proficiency in designing and implementing database schemas, data models, and database normalization techniques. Knowledge of entity-relationship (ER) modeling and understanding how to translate business requirements into efficient database structures.</p>\\r\\n<p>3. Database Administration: Experience in administering and managing databases, including tasks such as installation, configuration, backup and recovery, performance tuning, and security management. Knowledge of database administration tools and utilities is important.</p>\\r\\n<p>4. Query Optimization and Performance Tuning: Ability to analyze and optimize database queries for performance, identify and resolve performance bottlenecks, and implement indexing strategies. Familiarity with query optimization techniques, execution plans, and performance monitoring tools.</p>', '60000', '80000', '7', 'MS(CS)', '2023-05-22 14:10:15', 35),
 (107, 106, 'Cyber Security Dev', '<p>For a cybersecurity developer role, employers typically seek candidates with a strong background in software development and expertise in cybersecurity principles and practices.</p>\\r\\n<p>1. Programming Skills: Proficiency in one or more programming languages such as Python, Java, C++, or C#. Knowledge of scripting languages like PowerShell or Bash is also valuable.</p>\\r\\n<p>2. Cybersecurity Fundamentals: Understanding of cybersecurity concepts, principles, and best practices. Familiarity with common threats, vulnerabilities, and attack vectors. Knowledge of secure coding practices and the ability to identify and address security flaws in software.</p>\\r\\n<p>3. Secure Software Development: Experience in developing secure applications and implementing security controls throughout the software development lifecycle (SDLC). Knowledge of secure coding practices, encryption, authentication, access controls, and secure communication protocols.</p>\\r\\n<p>4. Vulnerability Assessment and Penetration Testing: Familiarity with vulnerability assessment tools and techniques, as well as experience in conducting penetration testing to identify and remediate security weaknesses in applications and systems.</p>\\r\\n<p>5. Network Security: Understanding of network protocols, firewalls, intrusion detection and prevention systems (IDPS), and secure network architecture. Knowledge of network security principles and the ability to configure and manage network security controls.</p>\\r\\n<p>6. Security Compliance and Regulations: Knowledge of industry standards and regulations related to cybersecurity, such as the Payment Card Industry Data Security Standard (PCI DSS), General Data Protection Regulation (GDPR), or Health Insurance Portability and Accountability Act (HIPAA).</p>\\r\\n<p>7. Security Frameworks and Tools: Familiarity with cybersecurity frameworks such as NIST Cybersecurity Framework or ISO 27001. Knowledge of security tools and technologies such as SIEM (Security Information and Event Management) systems, intrusion detection systems (IDS), or antivirus solutions.</p>\\r\\n<p>8. Continuous Learning: The field of cybersecurity is constantly evolving, so a willingness to stay updated with the latest trends, technologies, and security threats is essential. Participation in relevant certifications, training programs, or cybersecurity communities is a plus.</p>\\r\\n<p>&nbsp;</p>', '50000', '100000', '9', 'MS (Cyber Security)', '2023-05-22 14:12:11', 25),
 (108, 107, 'Electrical Engineer', '<p>For an electrical engineer role, employers typically seek candidates with a strong foundation in electrical engineering principles, technical expertise, and practical experience. Here are some common requirements for an electrical engineer position:</p>\\r\\n<p>1. Electrical Circuit Design: Proficiency in designing and analyzing electrical circuits, including knowledge of circuit theory, Ohm\\\'s law, Kirchhoff\\\'s laws, and component selection. Ability to use computer-aided design (CAD) tools for circuit design.</p>\\r\\n<p>2. Electronics: Understanding of electronic components, such as resistors, capacitors, diodes, transistors, and integrated circuits. Familiarity with analog and digital electronics, signal processing, and PCB (Printed Circuit Board) design.</p>\\r\\n<p>3. Power Systems: Knowledge of power generation, transmission, and distribution systems. Understanding of power system components, such as transformers, generators, motors, and protective devices. Ability to analyze power flow, fault conditions, and perform load calculations.</p>\\r\\n<p>&nbsp;</p>', '25000', '75000', '3', 'BS (EE)', '2023-05-22 14:22:37', 55),
-(109, 105, 'Test', '<p>Test</p>', '10000', '100000', '10', 'BS', '2023-05-25 11:38:41', 40),
-(110, 105, 'Test 2', '<p>ABC</p>', '19000', '100000', '10', 'BS', '2023-05-25 11:59:33', 22);
+(113, 105, 'Test Job', '<p>Test</p>', '14000', '25000', '10', 'MSCS', '2023-05-29 07:24:00', 25);
 
 -- --------------------------------------------------------
 
@@ -52983,7 +52981,8 @@ INSERT INTO `users` (`id_user`, `firstname`, `lastname`, `email`, `password`, `a
 (110, 'Anas', 'Khan', 'test7@user.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', 'Test Address 7', 'Islamabad', 'Federal Territory', '03000000007', 'BSC', 'MME', '2023-05-12', '2003-02-12', '20', '3520000000007', '646b61698c177.pdf', '252ef62897445ebee7e3ad3752cec83d', 1, 'Hi I am the Seventh Test User', 'Material Engineering, \r\nPowder Metallurgy'),
 (111, 'Asfar', 'Ali', 'test8@user.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', 'Test Address 8', 'Bahawalpur', 'Punjab', '03000000008', 'BSC', 'EE', '2023-05-12', '2002-11-14', '20', '3520000000008', '646b61ef37a4a.pdf', '391b268501b08c51cb9d3344ed0a707d', 1, 'Hi I am the Eighth Test User', 'Electric Circuits, DLD, Circuit Designing\r\nMatlab Coding'),
 (112, 'Usama', 'Babar', 'test9@user.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', 'Test Address 9', 'Multan', 'Punjab', '03000000009', 'PHD', 'Electronics', '2023-02-23', '2000-09-12', '22', '3520000000009', '646b628ccd44d.pdf', '8961b55332b3570aeadd88387d91f86a', 1, 'Hi I am the Ninth Test User', 'Electronic Boards, ICs\r\nCurrent Theory'),
-(113, 'Jawad', 'Ali', 'test10@user.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', 'Test Address 10', 'Quetta', 'Balochistan', '03000000010', 'BSC', 'CS', '2021-11-18', '2001-04-18', '22', '3520000000010', '646b63052bbe1.pdf', '2715779f718fd490c0a08909498e74ed', 1, 'Hi I am the Tenth Test User', 'Photography, Video Editing\r\nCSS, HTML, JavaScript\r\nPython, ML');
+(113, 'Jawad', 'Ali', 'test10@user.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', 'Test Address 10', 'Quetta', 'Balochistan', '03000000010', 'BSC', 'CS', '2021-11-18', '2001-04-18', '22', '3520000000010', '646b63052bbe1.pdf', '2715779f718fd490c0a08909498e74ed', 1, 'Hi I am the Tenth Test User', 'Photography, Video Editing\r\nCSS, HTML, JavaScript\r\nPython, ML'),
+(114, 'Test', 'User', 'test11@user.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', 'Test Address 11', 'Lahore', 'Punjab', '03000000011', 'MSC', 'CS', '2023-03-27', '1975-01-01', '48', '3520000000011', '647452a0a93fd.pdf', 'e3330df324d4022f86572e93afce4d2f', 1, 'Hi I am the Eleventh Test User', 'HTML, CSS, JS');
 
 --
 -- Indexes for dumped tables
@@ -53065,7 +53064,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `apply_job_post`
 --
 ALTER TABLE `apply_job_post`
-  MODIFY `id_apply` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_apply` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `cities`
@@ -53089,7 +53088,7 @@ ALTER TABLE `countries`
 -- AUTO_INCREMENT for table `job_post`
 --
 ALTER TABLE `job_post`
-  MODIFY `id_jobpost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `id_jobpost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT for table `mailbox`
@@ -53113,7 +53112,7 @@ ALTER TABLE `states`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
